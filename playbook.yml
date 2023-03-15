@@ -10,7 +10,7 @@
 
     - name: Create & Start Calculator Docker Container
       docker_container:
-        name: calculator-using-devops
+        name: calc
         image: satvi4/calc
         state: started
         tty: yes
