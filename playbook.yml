@@ -3,7 +3,7 @@
   tasks:
 
     - name: pull docker image
-      shell: docker pull sam1234gupta/mini_project:latest
+      shell: docker pull satvi4/calc
 
     - name: run container
-      shell: docker run -i -t --name calculator -d sam1234gupta/mini_project
+      shell: docker run -i -t --name calculator -d satvi4/calc
