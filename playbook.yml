@@ -1,17 +1,9 @@
-
----
-- name: Pull docker image of devopscalc
-  hosts: all
+- name: Pull and run docker image
+  hosts: localhost
   tasks:
-    - name: Pull devopscalc devops image
-      docker_image:
-        name: satvi4/calc
-        source: pull
 
-    - name: Create & Start Calculator Docker Container
-      docker_container:
-        name: calc
-        image: satvi4/calc
-        state: started
-        tty: yes
-        interactive: yes
+    - name: pull docker image
+      shell: docker pull sam1234gupta/mini_project:latest
+
+    - name: run container
+      shell: docker run -i -t --name calculator -d sam1234gupta/mini_project
